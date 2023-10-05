@@ -128,7 +128,7 @@ main {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    padding: 12px;
+    padding: 15px;
     border-radius: 10px;
     margin-bottom: 15px;
 }
@@ -219,11 +219,33 @@ footer a:hover {
 }
 
 
-@media (max-width: 480px) {
+@media (max-width: 680px) {
+    main{
+        padding: 1rem;
+    }
+    .results-card {
+       width: auto;
+    }
+}
+@media (max-width: 580px) {
+    main{
+        padding: 0;
+    }
     .results-card {
         display: flex;
         flex-direction: column;
         width: auto;
+        border-radius: 0;
+        box-shadow: none;
+        
+    }
+    .result-container{
+        border-radius: 0 0 35px 35px;
+        padding: 35px 0px;
+
+    }
+    .result-message{
+        padding: 0 50px;
     }
     footer {
         font-size: 0.7rem;
