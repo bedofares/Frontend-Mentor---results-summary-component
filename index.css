@@ -1,0 +1,232 @@
+:root {
+    --Light-red: hsl(0, 100%, 67%);
+    --Orangey-yellow: hsl(39, 100%, 56%);
+    --Green-teal: hsl(166, 100%, 37%);
+    --Cobalt-blue: hsl(234, 85%, 45%);
+    --Light-slate-blue: hsl(252, 100%, 67%);
+    --Light-royal-blue: hsl(241, 81%, 54%);
+    --Violet-blue: hsla(256, 72%, 46%, 1);
+    --Persian-blue: hsla(241, 72%, 46%, 0);
+    --White: hsl(0, 0%, 100%);
+    --Pale-blue: hsla(221, 100%, 96%, 0.9);
+    --Light-lavender: hsl(241, 100%, 89%);
+    --Dark-gray-blue: hsl(224, 30%, 27%);
+}
+
+@font-face {
+    font-family: HankenGrotesk;
+    src: url('./assets/fonts/HankenGrotesk-VariableFont_wght.ttf');
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    display: grid;
+    align-content: center;
+    background-color: var(--White);
+    grid-template-rows: 1fr auto;
+    font-family: HankenGrotesk;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.results-card {
+    display: flex;
+    flex-direction: row;
+    border-radius: 35px;
+    background-color: var(--White);
+    height: auto;
+    width: 650px;
+    box-shadow: hsl(241, 100%, 89%) 0px 8px 24px;
+}
+
+.result-container {
+    display: flex;
+    flex-direction: column;
+    padding: 35px 45px;
+    align-items: center;
+    text-align: center;
+    flex-basis: 50%;
+    border-radius: 35px;
+    background-color: hsl(250, 95%, 61%);
+    gap: 15px;
+    box-sizing: border-box;
+}
+
+.result-container-title {
+    color: var(--Pale-blue);
+    font-weight: 600;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.score-circle {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    height: 180px;
+    width: 180px;
+    background-color: hsl(253, 69%, 48%);
+    box-shadow: inset 0 0 10px --Persian-blue;
+}
+
+.score {
+    font-size: 50px;
+    color: var(--White);
+    font-weight: 700;
+}
+
+.total {
+    color: hsla(221, 100%, 96%, 0.7);
+    font-size: 16px;
+}
+
+.result-message-title {
+    color: var(--White);
+    font-weight: 600;
+    font-size: 25px;
+}
+
+.result-message {
+    color: var(--Pale-blue);
+    font-weight: 400;
+    font-size: 16px;
+    /* border: 1px solid black; */
+}
+
+.summary-container {
+    flex-basis: 50%;
+    display: flex;
+    flex-direction: column;
+    padding: 35px 30px;
+    /* align-items: center; */
+}
+
+.summary-container-title {
+    color: var(--Dark-gray-blue);
+    font-weight: 700;
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+/* .summary-reaction , .summary-reaction , .summary-reaction , .summary-reaction{
+    display: flex;
+} */
+
+.summary-reaction, .summary-memory, .summary-verbal, .summary-visual {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 12px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.summary-reaction .category, .summary-memory .category, .summary-verbal .category, .summary-visual .category {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.summary-reaction {
+    background-color: hsla(0, 100%, 67%, 0.1);
+}
+
+.summary-reaction .category-name {
+    color: var(--Light-red);
+    font-weight: 500;
+    font-size: 16px;
+}
+
+
+.summary-memory {
+    background-color: hsla(39, 100%, 56%, 0.1);
+}
+
+.summary-memory .category-name {
+    color: var(--Orangey-yellow);
+    font-weight: 500;
+    font-size: 16px;
+}
+
+
+.summary-verbal {
+    background-color: hsla(166, 100%, 37%, 0.1);
+}
+
+.summary-verbal .category-name {
+    color: var(--Green-teal);
+    font-weight: 500;
+    font-size: 16px;
+}
+
+.summary-visual {
+    background-color: hsla(234, 85%, 45%, 0.1);
+}
+
+.summary-visual .category-name {
+    color: var(--Cobalt-blue);
+    font-weight: 500;
+    font-size: 16px;
+}
+
+.grade .grade-score {
+    color: var(--Dark-gray-blue);
+    font-weight: 700;
+}
+.grade .grade-total {
+    font-weight: 700;
+    opacity: 0.3;
+}
+
+.btn {
+    background-color: hsl(250, 95%, 61%);
+    color: var(--White);
+    outline: none;
+    border: 0;
+    border-radius: 30px;
+    padding: 15px;
+    font-weight: 700;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+.btn:hover{
+    opacity: 0.8;
+}
+footer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    padding: 1rem;
+}
+
+footer a:hover {
+    color: hsl(250, 95%, 61%);
+}
+
+
+@media (max-width: 480px) {
+    .results-card {
+        display: flex;
+        flex-direction: column;
+        width: auto;
+    }
+    footer {
+        font-size: 0.7rem;
+        gap: 0.5rem;
+    }
+}
